@@ -1,0 +1,220 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  font-family: "Work Sans", sans-serif;
+  background-color: #f7f7f7;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+@font-face {
+  font-family: "TBCCONTRACTICA";
+  src: url("/assets/fonts/TBCCONTRACTICA-REGULAR.TTF") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: "TBCCONTRACTICA", Arial, Helvetica, sans-serif;
+  background-color: #3e3e3e;
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 0 46px 0 46px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  padding-top: 44px;
+  width: 100%;
+  gap: 37px;
+}
+footer .footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1440px;
+  padding: 0px clamp(16px, 8vw, 160px);
+  width: 100%;
+  margin: 0 auto;
+}
+@media (max-width: 481px) {
+  footer .footer-content {
+    padding: 0 24px;
+    gap: 32px;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+}
+footer .footer-content .contact-info ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 18px;
+}
+footer .footer-content .contact-info ul li {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+@media (max-width: 481px) {
+  footer .footer-content .contact-info ul li {
+    font-size: 13px;
+    line-height: 130%;
+  }
+}
+footer .footer-content .contact-info ul li a {
+  font-weight: 300;
+  color: #ffffff;
+  text-decoration: none;
+}
+footer .footer-content .logos {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}/*# sourceMappingURL=global.css.map */
