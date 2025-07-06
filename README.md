@@ -40,5 +40,5 @@ A modern and responsive weather forecast website that allows users to check curr
 This app uses the [OpenWeatherMap One Call API](https://openweathermap.org/api/one-call-api).  
 
 
-```js
-const API_KEY = 'your_api_key_here';
+
+
