@@ -38,7 +38,7 @@ A modern and responsive weather forecast website that allows users to check curr
 ## 🔑 API Key
 
 This app uses the [OpenWeatherMap One Call API](https://openweathermap.org/api/one-call-api).  
-You must manually insert your API key in `renderer.js`:
+
 
 ```js
 const API_KEY = 'your_api_key_here';
