@@ -198,12 +198,9 @@ button {
 body.dark-mode {
   --main-bg-color: var(--dark-main-bg-color);
   --panel-bg-color: var(--dark-panel-bg-color);
-  --text-color: var(--dark-text-color);
-  --sub-text-color: var(--dark-sub-text-color);
   --border-color: var(--dark-border-color);
   --shadow-color: var(--dark-shadow-color);
   --primary-color: var(--dark-primary-color);
-  --accent-color: var(--dark-accent-color);
 }
 
 /* Basic Typography and Layout */
@@ -237,6 +234,9 @@ body {
   border-radius: var(--border-radius);
   background-color: var(--panel-bg-color);
   transition: background-color var(--transition-speed), box-shadow var(--transition-speed);
+}
+.app-container .logo {
+  max-height: 128px;
 }
 
 .panel {
@@ -321,7 +321,7 @@ body {
   color: var(--text-color);
   font-size: 1em;
   outline: none;
-  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 0 10px rgba(115, 53, 118, 0.653);
   transition: background-color var(--transition-speed), color var(--transition-speed), box-shadow var(--transition-speed);
 }
 .top-bar .search-section #city-search-input::-moz-placeholder {
@@ -366,8 +366,13 @@ body {
   justify-content: flex-start;
   align-items: center;
 }
-.main-content .left-panel #city-name {
+.main-content .left-panel #country-name {
+  font-weight: 700;
   font-size: 2.5em;
+  color: var(--text-color);
+}
+.main-content .left-panel #city-name {
+  font-size: 2.1em;
   margin-bottom: 10px;
   color: var(--text-color);
 }
@@ -430,7 +435,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: flex-start;
+  align-items: center;
 }
 .main-content .right-panel .detail-item {
   display: flex;

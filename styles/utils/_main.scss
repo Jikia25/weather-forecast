@@ -37,6 +37,9 @@ body {
   background-color: var(--panel-bg-color);
   transition: background-color var(--transition-speed),
     box-shadow var(--transition-speed);
+  .logo {
+    max-height: 128px;
+  }
 }
 
 .panel {
@@ -46,12 +49,7 @@ body {
   box-shadow: 0 4px 10px var(--shadow-color);
   transition: background-color var(--transition-speed),
     box-shadow var(--transition-speed);
-
 }
-// &:hover {
-//   box-shadow: 0 6px 16px var(--shadow-color);
-//   transform: scale(1.02);
-// }
 
 /* Top Bar - Search and Dark Mode Toggle */
 .top-bar {
@@ -133,7 +131,7 @@ body {
       color: var(--text-color);
       font-size: 1em;
       outline: none;
-      box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+      box-shadow: inset 0 0 10px rgba(115, 53, 118, 0.653);
       transition: background-color var(--transition-speed),
         color var(--transition-speed), box-shadow var(--transition-speed);
 
@@ -181,9 +179,13 @@ body {
     text-align: center;
     justify-content: flex-start;
     align-items: center;
-
-    #city-name {
+    #country-name {
+      font-weight: 700;
       font-size: 2.5em;
+      color: var(--text-color);
+    }
+    #city-name {
+      font-size: 2.1em;
       margin-bottom: 10px;
       color: var(--text-color);
     }
@@ -258,7 +260,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: flex-start;
+    align-items: center;
 
     .detail-item {
       display: flex;
