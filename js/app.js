@@ -46,6 +46,69 @@ function renderWeatherData(weatherObject) {
     forecast.forecastday[0].astro.sunset,
     forecast.forecastday[0].astro.sunrise
   );
+  renderDailyForecast(forecast.forecastday);
+  renderHourlyForecast(forecast.forecastday[0].hour);
+
+
+function renderDailyForecast(forecastArray) {
+  const container = document.querySelector(".daily-forecast-container");
+  container.innerHTML = "";
+
+  const fourteenDays = forecastArray.slice(6, 12);
+
+  fourteenDays.forEach((day) => {
+    const date = new Date(day.date);
+    const dayShort = date.toLocaleDateString("en-GB", {
+      weekday: "short",
+    });
+    const dayDiv = document.createElement("div");
+    dayDiv.classList.add("forecast-day");
+
+    const dayName = document.createElement("div");
+    dayName.textContent = dayShort;
+
+    const icon = document.createElement("img");
+    icon.src = `https:${day.day.condition.icon}`;
+    icon.alt = day.day.condition.text;
+
+    const temp = document.createElement("div");
+    temp.textContent = `${day.day.avgtemp_c}°C`;
+
+    dayDiv.appendChild(dayName);
+    dayDiv.appendChild(icon);
+    dayDiv.appendChild(temp);
+
+    container.appendChild(dayDiv);
+  });
+}
+function renderHourlyForecast(hourArray) {
+  const container = document.querySelector(".hourly-forecast-container");
+  container.innerHTML = "";
+
+  const twelveHours = hourArray.slice(6, 18); 
+
+  twelveHours.forEach((hourData) => {
+    const hourDiv = document.createElement("div");
+    hourDiv.classList.add("hour-block");
+
+    const time = document.createElement("div");
+    const hour = new Date(hourData.time).getHours();
+    time.textContent = `${hour}:00`;
+
+    const icon = document.createElement("img");
+    icon.src = `https:${hourData.condition.icon}`;
+    icon.alt = hourData.condition.text;
+
+    const temp = document.createElement("div");
+    temp.textContent = `${hourData.temp_c}°C`;
+
+    hourDiv.appendChild(time);
+    hourDiv.appendChild(icon);
+    hourDiv.appendChild(temp);
+
+    container.appendChild(hourDiv);
+  });
+}
 
   function renderCityName(city) {
     const cityTag = document.querySelector("#city-name");
@@ -109,17 +172,13 @@ function renderWeatherData(weatherObject) {
   }
 }
 
-
-
 const toggle = document.getElementById("darkmode-toggle");
 
-// შეამოწმე ჩართულია თუ არა dark mode ბოლო ვიზიტზე
 if (localStorage.getItem("darkMode") === "enabled") {
   document.body.classList.add("dark-mode");
   toggle.checked = true;
 }
 
-// როცა ჩასვავ ან მოხსნი ჩეკბოქსს
 toggle.addEventListener("change", () => {
   if (toggle.checked) {
     document.body.classList.add("dark-mode");

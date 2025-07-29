@@ -16,8 +16,13 @@
   <body>
     <div class="app-container">
       <header class="top-bar">
-        <img src="./assets/images/png/logo_10x.png" class="logo" alt="logo 10x" />
-
+        <div class="logo-wrapper">
+          <img
+            src="./assets/images/png/logo_10x.png"
+            class="logo"
+            alt="logo 10x"
+          />
+        </div>
         <form class="search-section">
           <i class="fas fa-search search-icon"></i>
           <input
@@ -25,12 +30,12 @@
             id="city-search-input"
             placeholder="Search for your preferred city..."
           />
-          
+
           <button type="submit" id="current-location-btn">
             <i class="fas fa-location-arrow"></i> Search
           </button>
         </form>
-                <div class="dark-mode-toggle">
+        <div class="dark-mode-toggle">
           <input type="checkbox" id="darkmode-toggle" />
           <label for="darkmode-toggle"></label>
         </div>
@@ -91,8 +96,10 @@
 
       <section class="forecast-section">
         <div class="five-day-forecast panel">
-          <h3>14 Days Forecast:</h3>
-          <div class="daily-forecast-container"></div>
+          <h3>7 Days Forecast:</h3>
+      <div class="daily-forecast-container"></div>
+
+
         </div>
 
         <div class="hourly-forecast panel">
