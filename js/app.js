@@ -54,13 +54,19 @@ function renderDailyForecast(forecastArray) {
   const container = document.querySelector(".daily-forecast-container");
   container.innerHTML = "";
 
-  const fourteenDays = forecastArray.slice(6, 12);
+  const days = forecastArray.slice(0, 14); // 14 დღე
 
-  fourteenDays.forEach((day) => {
+  const row1 = document.createElement("div");
+  row1.classList.add("forecast-row");
+  const row2 = document.createElement("div");
+  row2.classList.add("forecast-row");
+
+  days.forEach((day, index) => {
     const date = new Date(day.date);
     const dayShort = date.toLocaleDateString("en-GB", {
       weekday: "short",
     });
+
     const dayDiv = document.createElement("div");
     dayDiv.classList.add("forecast-day");
 
@@ -78,37 +84,51 @@ function renderDailyForecast(forecastArray) {
     dayDiv.appendChild(icon);
     dayDiv.appendChild(temp);
 
-    container.appendChild(dayDiv);
+    if (index < 7) {
+      row1.appendChild(dayDiv);
+    } else {
+      row2.appendChild(dayDiv);
+    }
   });
+
+  container.appendChild(row1);
+  container.appendChild(row2);
 }
+
+
+
 function renderHourlyForecast(hourArray) {
   const container = document.querySelector(".hourly-forecast-container");
   container.innerHTML = "";
 
-  const twelveHours = hourArray.slice(6, 18); 
+  const hours = hourArray.slice(6, 18); // დილის 6-დან 18-მდე — 12 საათი
 
-  twelveHours.forEach((hourData) => {
+  hours.forEach((hour) => {
+    const time = hour.time.split(" ")[1].slice(0, 5); // HH:MM
+
     const hourDiv = document.createElement("div");
-    hourDiv.classList.add("hour-block");
-
-    const time = document.createElement("div");
-    const hour = new Date(hourData.time).getHours();
-    time.textContent = `${hour}:00`;
+    hourDiv.classList.add("hour-forecast-item");
 
     const icon = document.createElement("img");
-    icon.src = `https:${hourData.condition.icon}`;
-    icon.alt = hourData.condition.text;
+    icon.src = `https:${hour.condition.icon}`;
+    icon.alt = hour.condition.text;
 
     const temp = document.createElement("div");
-    temp.textContent = `${hourData.temp_c}°C`;
+    temp.classList.add("hour-temp");
+    temp.textContent = `${hour.temp_c}°C`;
 
-    hourDiv.appendChild(time);
+    const timeLabel = document.createElement("div");
+    timeLabel.classList.add("hour-time");
+    timeLabel.textContent = time;
+
+    hourDiv.appendChild(timeLabel);
     hourDiv.appendChild(icon);
     hourDiv.appendChild(temp);
 
     container.appendChild(hourDiv);
   });
 }
+
 
   function renderCityName(city) {
     const cityTag = document.querySelector("#city-name");
