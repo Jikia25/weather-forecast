@@ -23,9 +23,8 @@ A modern and responsive web application to get real-time weather updates and 7-d
 - **Google Material Symbols:** For various weather and detail icons.
 - **Font Awesome:** For general UI icons (search, location, arrows).
 
-## 🖼️ Screenshots <img width="1051" height="422" alt="Screenshot 2025-07-22 at 01 38 29" src="https://github.com/user-attachments/assets/f1404d9c-7ed9-4aaa-ba00-79525f08aacc" />
-<img width="511" height="412" alt="Screenshot 2025-07-22 at 22 45 58" src="https://github.com/user-attachments/assets/86bb500c-7c59-4c02-b7ad-0f92e7dc4fcd" />
-<img width="1029" height="923" alt="Screenshot 2025-07-30 at 23 48 21" src="https://github.com/user-attachments/assets/a8afd2d6-9501-4fa0-b3b5-9bcd30547e11" />
+## 🖼️ Screenshots <img width="1029" height="923" alt="Screenshot 2025-07-30 at 23 48 21" src="https://github.com/user-attachments/assets/24d73957-1740-41ac-8f1b-94e460c6d877" />
+
 
 ## 📦 Installation & Setup
 
@@ -70,33 +69,6 @@ Markdown
 # ☀️ Weather App
 
 A modern and responsive web application to get real-time weather updates and 7-day forecasts for any city worldwide. Built with HTML, SCSS (Sass), and JavaScript, and powered by the WeatherAPI.com.
-
-## ✨ Features
-
-- **Current Weather:** Displays current temperature, "feels like" temperature, weather description, humidity, wind degree, cloud cover, and UV index.
-- **Sunrise & Sunset Times:** Provides daily sunrise and sunset times.
-- **7-Day Forecast:** Shows a daily forecast including average temperature and weather conditions for the next 7 days.
-- **Hourly Forecast:** Offers a detailed hourly forecast for the current day.
-- **City Search:** Search for weather information for any city across the globe.
-- **Dark Mode Toggle:** A user-friendly switch to toggle between light and dark themes for improved readability and user preference.
-- **Responsive Design:** Optimized for various screen sizes, from mobile devices to large desktops.
-- **Smooth Scrolling Forecast:** Intuitive navigation for daily and hourly forecasts with scroll buttons.
-
-## 🚀 Technologies Used
-
-- **HTML5:** Structure of the web application.
-- **SCSS (Sass):** Pre-processed CSS for organized and maintainable stylesheets.
-- **JavaScript (ES Modules):** Dynamic functionality, API integration, and DOM manipulation.
-- **WeatherAPI.com:** Provides comprehensive weather data.
-- **Google Material Symbols:** For various weather and detail icons.
-- **Font Awesome:** For general UI icons (search, location, arrows).
-
-## 🖼️ Screenshots (Optional - Add your own here!)
-
-_(You can add screenshots of your app here to showcase its design and functionality)_
-
-![Screenshot of Weather App Light Mode](link-to-your-light-mode-screenshot.png)
-![Screenshot of Weather App Dark Mode](link-to-your-dark-mode-screenshot.png)
 
 ## 📦 Installation & Setup
 
