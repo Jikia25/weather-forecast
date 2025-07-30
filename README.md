@@ -1,3 +1,4 @@
+
 # ☀️ Weather App
 
 A modern and responsive web application to get real-time weather updates and 7-day forecasts for any city worldwide. Built with HTML, SCSS (Sass), and JavaScript, and powered by the WeatherAPI.com.
