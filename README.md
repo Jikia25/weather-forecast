@@ -23,12 +23,9 @@ A modern and responsive web application to get real-time weather updates and 7-d
 - **Google Material Symbols:** For various weather and detail icons.
 - **Font Awesome:** For general UI icons (search, location, arrows).
 
-## 🖼️ Screenshots (Optional - Add your own here!)
-
-_(You can add screenshots of your app here to showcase its design and functionality)_
-
-![Screenshot of Weather App Light Mode](link-to-your-light-mode-screenshot.png)
-![Screenshot of Weather App Dark Mode](link-to-your-dark-mode-screenshot.png)
+## 🖼️ Screenshots <img width="1051" height="422" alt="Screenshot 2025-07-22 at 01 38 29" src="https://github.com/user-attachments/assets/f1404d9c-7ed9-4aaa-ba00-79525f08aacc" />
+<img width="511" height="412" alt="Screenshot 2025-07-22 at 22 45 58" src="https://github.com/user-attachments/assets/86bb500c-7c59-4c02-b7ad-0f92e7dc4fcd" />
+<img width="1029" height="923" alt="Screenshot 2025-07-30 at 23 48 21" src="https://github.com/user-attachments/assets/a8afd2d6-9501-4fa0-b3b5-9bcd30547e11" />
 
 ## 📦 Installation & Setup
 
